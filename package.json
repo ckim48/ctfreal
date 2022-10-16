@@ -1,12 +1,10 @@
-"scripts": {
-  "start": "node login.js"
-}
 {
   "name": "vulnerableapp",
   "version": "1.0.0",
   "description": "",
   "main": "login.js",
   "scripts": {
+    "start": "node login.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
