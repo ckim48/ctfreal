@@ -1,1 +1,94 @@
-d
+<!DOCTYPE html>
+<html>
+	<head>
+    <!-- bootstrap -->
+    <!-- https://getbootstrap.com/docs/5.0/getting-started/download/ -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!--https://cdnjs.com/libraries/font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+  	<title>ctf</title>
+    <meta charset="utf-8">
+</head>
+
+<!-- <body style="background-color: #dedede;" onload='animals()'>
+  <form action="/auth" method="post" style="text-align:center; padding-top: 17%;" onsubmit='checkAdmin()'>
+    <input style="margin-bottom: 10px" type="text" size="20" name="username" id="inputUsername" placeholder="Username"></br>
+    <input style="margin-bottom: 17px" type="text" size="20" name="password" id="inputPassword" placeholder="Password"></br>
+    <input type="submit" value="Login" id="login_btn">
+    
+    
+  </form>
+  
+</body> -->
+
+<body>
+  <!-- bootstrap 제공 -->
+  <div class="container-fluid"> 
+    <div class="row">
+      <!-- 사이트 나누기 -->
+      <div class="col-sm-6 text-black mt-5">
+        <!-- spacing -->
+        <div class="px-5 ms-xl-4">
+          <i class="h2 fa-solid fa-flag-checkered"></i>
+          <span class="h1 fw-bold mb-0">CTF</span>
+        </div>
+        <div class="d-flex align-itmes-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
+          <form action="/auth" method="post" onsubmit='checkAdmin()' style="width: 23rem;"> <!--similar to pixel/ pixel은 고정값, rem은 화면사이즈에 따라 달라짐-->
+            <h3 class="fw-bold mb-3 pb-3">Login</h3>
+            
+            <div class="form-outline mb-4">
+              <input type="text" id="inputUsername" name="username" class="form-control form-control-lg" placeholder="Username">
+            </div>
+
+            <div class="form-outline mb-4">
+              <input type="text" id="inputPassword" name="password" class="form-control form-control-lg" placeholder="Password">
+            </div>
+
+            <div>
+              <input type="submit" class="btn btn-info btn-lg btn-primary" value="Login"></input>
+            </div>
+            
+          </form>
+        </div>
+      </div>
+      <div class="col-sm-6 px-0 d-none d-sm-block">
+        <img src="src\img\moon.png" alt="Login Image" class="w-100 vh-100" style="object-fit:cover;">
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>
+
+<script>
+function animals(){
+    // JSON
+    var animalObject = {
+      'Password': 'Wild2',
+      'Username': 'Domestic'
+    };
+
+    // flatten the animal object as a string
+    animalString = JSON.stringify(animalObject);
+
+    //store the string into local storage
+    localStorage.setItem('Admin', animalString);
+    localStorage.setItem('isAdmin','false');
+}
+</script>
+
+<script>
+  function checkAdmin(){
+    console.log("asdfjlkasdf");
+    const checkUsername = document.getElementById("inputUsername").text;
+    const checkPassword = document.getElementById("inputPassword").text;
+    console.log(checkUsername);
+
+    if(checkUsername == "Domestic" && checkPassword == "Wild"){
+      localStorage.setItem('isAdmin','true');
+    }
+  }
+</script>

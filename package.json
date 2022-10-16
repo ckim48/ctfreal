@@ -1,12 +1,27 @@
 {
   "name": "vulnerableapp",
   "version": "1.0.0",
-  "description": "",
   "main": "login.js",
   "scripts": {
     "start": "node login.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ttugbaegi0521/CTF.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/ttugbaegi0521/CTF/issues"
+  },
+  "homepage": "https://github.com/ttugbaegi0521/CTF#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "mysql": "^2.18.1",
+    "node-localstorage": "^2.2.1"
+  }
 }
