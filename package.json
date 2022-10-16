@@ -1,3 +1,6 @@
+"scripts": {
+  "start": "node login.js"
+}
 {
   "name": "vulnerableapp",
   "version": "1.0.0",
