@@ -78,5 +78,4 @@ app.get('/home', function(request, response) {
 app.get('/blog', function(request, response){
     response.sendFile(path.join(__dirname + '/blog.html'))
 });
-
-app.listen(3000);
+app.listen(process.env.PORT || 5000)
